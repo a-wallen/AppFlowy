@@ -185,13 +185,13 @@ script_runner = "@duckscript"
 [tasks.code_generation]
 script_runner = "@shell"
 script = [
-  "../code_generation/generate.sh"
+  "scripts/code_generation/generate.sh"
 ]
 
 [tasks.code_generation.windows]
 script_runner = "@duckscript"
 script = [
-  "../code_generation/generate.cmd"
+  "scripts/code_generation/generate.cmd"
 ]
 
 
