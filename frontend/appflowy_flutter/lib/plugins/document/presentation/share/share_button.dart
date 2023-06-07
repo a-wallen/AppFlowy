@@ -9,7 +9,7 @@ import 'package:appflowy_backend/protobuf/flowy-document2/entities.pb.dart';
 import 'package:appflowy_popover/appflowy_popover.dart';
 import 'package:clipboard/clipboard.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:file_picker/file_picker.dart';
+import 'package:flowy_infra/file_picker/file_picker_impl.dart';
 import 'package:flowy_infra_ui/widget/rounded_button.dart';
 import 'package:appflowy_backend/log.dart';
 import 'package:appflowy_backend/protobuf/flowy-error/errors.pb.dart';
@@ -94,7 +94,7 @@ class ShareActionList extends StatelessWidget {
       onSelected: (action, controller) async {
         switch (action.inner) {
           case ShareAction.markdown:
-            final exportPath = await FilePicker.platform.saveFile(
+            final exportPath = await FilePicker().saveFile(
               dialogTitle: '',
               fileName: '${view.name}.md',
             );
