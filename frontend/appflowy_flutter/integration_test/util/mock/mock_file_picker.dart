@@ -1,6 +1,6 @@
 import 'package:appflowy/startup/startup.dart';
-import 'package:appflowy/util/file_picker/file_picker_impl.dart';
-import 'package:appflowy/util/file_picker/file_picker_service.dart';
+import 'package:flowy_infra/file_picker/file_picker_impl.dart';
+import 'package:flowy_infra/file_picker/file_picker_service.dart';
 
 import '../util.dart';
 
