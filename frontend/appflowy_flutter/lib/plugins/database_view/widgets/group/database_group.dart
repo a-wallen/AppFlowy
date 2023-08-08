@@ -1,8 +1,9 @@
+import 'package:appflowy/generated/flowy_svgs.g.dart';
 import 'package:appflowy/plugins/database_view/application/field/field_controller.dart';
 import 'package:appflowy/plugins/database_view/application/setting/group_bloc.dart';
 import 'package:appflowy/plugins/database_view/grid/presentation/layout/sizes.dart';
 import 'package:appflowy/plugins/database_view/grid/presentation/widgets/header/field_type_extension.dart';
-import 'package:flowy_infra/image.dart';
+
 import 'package:flowy_infra/theme_extension.dart';
 import 'package:flowy_infra_ui/style_widget/button.dart';
 import 'package:flowy_infra_ui/style_widget/text.dart';
@@ -73,7 +74,7 @@ class _GridGroupCell extends StatelessWidget {
     if (fieldInfo.isGroupField) {
       rightIcon = const Padding(
         padding: EdgeInsets.all(2.0),
-        child: FlowySvg(name: "grid/checkmark"),
+        child: FlowySvg(FlowySvgs.checkmark),
       );
     }
 
@@ -86,8 +87,7 @@ class _GridGroupCell extends StatelessWidget {
           color: AFThemeExtension.of(context).textColor,
         ),
         leftIcon: FlowySvg(
-          name:
-          fieldInfo.fieldType.iconName(),
+          fieldInfo.fieldType.icon(),
           color: Theme.of(context).iconTheme.color,
         ),
         rightIcon: rightIcon,

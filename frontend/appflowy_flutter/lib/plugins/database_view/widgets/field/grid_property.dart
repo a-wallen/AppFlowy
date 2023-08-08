@@ -1,10 +1,11 @@
+import 'package:appflowy/generated/flowy_svgs.g.dart';
 import 'package:appflowy/plugins/database_view/application/field/field_controller.dart';
 import 'package:appflowy/plugins/database_view/application/field/type_option/type_option_context.dart';
 import 'package:appflowy/plugins/database_view/application/setting/property_bloc.dart';
 import 'package:appflowy/plugins/database_view/grid/presentation/widgets/header/field_type_extension.dart';
 import 'package:appflowy/startup/startup.dart';
 import 'package:appflowy_popover/appflowy_popover.dart';
-import 'package:flowy_infra/image.dart';
+
 import 'package:flowy_infra/theme_extension.dart';
 import 'package:flowy_infra_ui/flowy_infra_ui.dart';
 import 'package:flutter/material.dart';
@@ -95,8 +96,7 @@ class _GridPropertyCellState extends State<_GridPropertyCell> {
   @override
   Widget build(BuildContext context) {
     final checkmark = FlowySvg(
-      name:
-      widget.fieldInfo.visibility ? 'home/show' : 'home/hide',
+      widget.fieldInfo.visibility ? FlowySvgs.show_ : FlowySvgs.hide_,
       color: Theme.of(context).iconTheme.color,
     );
 
@@ -122,8 +122,7 @@ class _GridPropertyCellState extends State<_GridPropertyCell> {
           color: AFThemeExtension.of(context).textColor,
         ),
         leftIcon: FlowySvg(
-          name:
-          widget.fieldInfo.fieldType.iconName(),
+          widget.fieldInfo.fieldType.icon(),
           color: Theme.of(context).iconTheme.color,
         ),
         rightIcon: FlowyIconButton(
