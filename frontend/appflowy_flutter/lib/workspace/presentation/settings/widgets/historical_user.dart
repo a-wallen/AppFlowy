@@ -72,7 +72,7 @@ class HistoricalUserItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final icon = isSelected ? const FlowySvg(FlowySvgs.checkmark) : null;
+    final icon = isSelected ? const FlowySvg(FlowySvgs.checkmark_grid) : null;
     final isDisabled = isSelected || user.authType != AuthTypePB.Local;
     final outputFormat = DateFormat('MM/dd/yyyy');
     final date =
