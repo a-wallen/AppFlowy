@@ -165,7 +165,8 @@ class GridFilterPropertyCell extends StatelessWidget {
         color: AFThemeExtension.of(context).textColor,
       ),
       onTap: () => onTap(fieldInfo),
-      leftIcon: svgWidget(
+      leftIcon: FlowySvg(
+        name:
         fieldInfo.fieldType.iconName(),
         color: Theme.of(context).iconTheme.color,
       ),

@@ -326,8 +326,8 @@ class _CurrentIcon extends StatelessWidget {
           },
           child: Container(
             margin: const EdgeInsets.fromLTRB(0, 5, 5, 5),
-            child: svgWidget(
-              'emoji/$iconUrl',
+            child: FlowySvg(
+              name: 'emoji/$iconUrl',
               size: _iconSize,
             ),
           ),
@@ -396,7 +396,7 @@ class IconOption extends StatelessWidget {
       onTap: () {
         setIcon(iconUrl);
       },
-      child: svgWidget('emoji/$iconUrl', size: _iconSize),
+      child: FlowySvg(name: 'emoji/$iconUrl', size: _iconSize),
     );
   }
 }
